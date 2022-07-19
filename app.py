@@ -11,7 +11,7 @@ app = Flask(__name__)
 def homePage():
     return render_template("index.html")
 
-@app.route('/review',methods=['POST','GET']) # route to show the review comments in a web UI
+@app.route('/review', methods=['POST','GET']) # route to show the review comments in a web UI
 @cross_origin()
 def index():
     if request.method == 'POST':
@@ -79,5 +79,5 @@ def index():
         return render_template('index.html')
 
 if __name__ == "__main__":
-    #app.run(host='127.0.0.1', port=8001, debug=True)
-	app.run(debug=True)
+    app.run(host='127.0.0.1', port=8001, debug=True)
+	#app.run(debug=True)
